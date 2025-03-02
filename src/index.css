@@ -1,0 +1,17 @@
+body {
+  background-color: #f8f9fa;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.contact-form {
+  max-width: 800px;
+}
+
+.container {
+  align-items: center;
+}
