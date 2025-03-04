@@ -70,7 +70,6 @@ function Footer() {
             <span className="company-name">OneByt Cloud Systems</span>
           </div>
           <p>© 2025 OneByt Cloud Systems. All Rights Reserved.</p>
-          <p>Aditya Narayan</p>
         </div>
       </div>
     </footer>
