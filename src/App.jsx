@@ -8,6 +8,8 @@ import Checkout from "./pages/Checkout";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Plans from "./pages/Plans";
+import WebServices from "./pages/WebServices";
+import MinecraftServices from "./pages/MinecraftServices";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/shipping-delivery" element={<ShippingDelivery />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/plans" element={<Plans />} />
+        <Route path="/web-services" element={<WebServices />} />
+        <Route path="/minecraft-services" element={<MinecraftServices />} />
       </Routes>
       <Footer />
     </>

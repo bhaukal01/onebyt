@@ -1,0 +1,59 @@
+.footer {
+  background-color: #12131a;
+  color: white;
+  padding: 40px 0;
+  font-size: 14px;
+}
+
+.footer .container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer h5 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: #bbb;
+  transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+  color: #1db954; /* Light green effect */
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 40px;
+}
+
+.company-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1db9ff; /* Blue theme */
+}

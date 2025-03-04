@@ -1,0 +1,29 @@
+.minecraft-services-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .minecraft-services-header h1 {
+    color: #1db9ff;
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .minecraft-services-header p {
+    color: #bbb;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  .minecraft-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .service-card {
+    background: #1a1b23;
+    padding: 20px;
+  
