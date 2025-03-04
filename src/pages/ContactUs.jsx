@@ -79,7 +79,7 @@ function ContactUs() {
             alt=""
             width={20}
           />
-          Email- support.onebyt.cloud
+          Email- support@onebyt.cloud
         </div>
         <div>
           <img
