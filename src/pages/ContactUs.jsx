@@ -69,6 +69,35 @@ function ContactUs() {
           Send Message
         </button>
       </form>
+      <br />
+      <hr />
+      <br />
+      <section>
+        <div>
+          <img
+            src="https://img.icons8.com/?size=100&id=12580&format=png&color=000000"
+            alt=""
+            width={20}
+          />
+          Email- support.onebyt.cloud
+        </div>
+        <div>
+          <img
+            src="https://img.icons8.com/?size=100&id=9659&format=png&color=000000"
+            alt=""
+            width={20}
+          />
+          Phone- +91 7367036311
+        </div>
+        <div>
+          <img
+            src="https://img.icons8.com/?size=100&id=53383&format=png&color=000000  "
+            alt=""
+            width={20}
+          />
+          Address- BH3 Panchsakha Nagar, Bhubaneswar, Odisha, India, 751020
+        </div>
+      </section>
     </div>
   );
 }

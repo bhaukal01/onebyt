@@ -7,7 +7,7 @@ function Plans() {
   const plans = [
     {
       name: "Bungee Plan [Only for Proxy servers]",
-      price: "5",
+      price: "180",
       ram: "2GB RAM",
       storage: "10GB SSD",
       players: "10 Players",
@@ -18,7 +18,7 @@ function Plans() {
     },
     {
       name: "Standard Plan",
-      price: "10",
+      price: "360",
       ram: "4GB RAM",
       storage: "20GB SSD",
       players: "20 Players",
@@ -29,7 +29,7 @@ function Plans() {
     },
     {
       name: "Advanced Plan",
-      price: "15",
+      price: "540",
       ram: "6GB RAM",
       storage: "30GB SSD",
       players: "30 Players",
@@ -40,7 +40,7 @@ function Plans() {
     },
     {
       name: "Pro Plan",
-      price: "20",
+      price: "720",
       ram: "8GB RAM",
       storage: "40GB SSD",
       players: "40 Players",
@@ -51,7 +51,7 @@ function Plans() {
     },
     {
       name: "Elite Plan",
-      price: "25",
+      price: "1080",
       ram: "12GB RAM",
       storage: "60GB SSD",
       players: "60 Players",
@@ -62,7 +62,7 @@ function Plans() {
     },
     {
       name: "Ultimate Plan",
-      price: "30",
+      price: "1440",
       ram: "16GB RAM",
       storage: "80GB SSD",
       players: "80 Players",
@@ -73,7 +73,7 @@ function Plans() {
     },
     {
       name: "Mega Plan",
-      price: "40",
+      price: "2160",
       ram: "24GB RAM",
       storage: "100GB SSD",
       players: "100 Players",
@@ -84,7 +84,7 @@ function Plans() {
     },
     {
       name: "Extreme Plan",
-      price: "50",
+      price: "2880",
       ram: "32GB RAM",
       storage: "150GB SSD",
       players: "150 Players",
@@ -113,7 +113,7 @@ function Plans() {
                 <h5 className="card-title">{plan.name}</h5>
                 <br />
                 <h6 className="card-subtitle mb-2 text-muted">
-                  {plan.price}/month
+                  Rs. {plan.price}/month
                 </h6>
                 <br />
                 <p className="card-text">{plan.ram}</p>
