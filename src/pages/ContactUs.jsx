@@ -95,7 +95,8 @@ function ContactUs() {
             alt=""
             width={20}
           />
-          Address- BH3 Panchsakha Nagar, Bhubaneswar, Odisha, India, 751020
+          Address- 302 Pitri Kripa Apartment, Kilburn Colony, Hinoo, Ranchi,
+          Jharkhand, 834002
         </div>
       </section>
     </div>
