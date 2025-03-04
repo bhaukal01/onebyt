@@ -1,4 +1,4 @@
-// import "./WebServices.css";
+import "./WebServices.css";
 
 function WebServices() {
   return (

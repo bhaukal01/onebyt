@@ -11,7 +11,11 @@ function Navbar({ handleLogout }) {
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          <img src="/src/assets/onebyt-logo.png" alt="OneByt Logo" width={50} />
+          <img
+            src="https://bhaukal-drive.s3.amazonaws.com/drive-files/onebyt-logo.png"
+            alt="OneByt Logo"
+            width={40}
+          />
           OneByt Cloud Systems
         </Link>
 

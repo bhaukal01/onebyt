@@ -60,7 +60,7 @@ function Footer() {
         <div className="footer-bottom">
           <div className="brand">
             <img
-              src="/src/assets/onebyt-logo.png"
+              src="https://bhaukal-drive.s3.amazonaws.com/drive-files/onebyt-logo.png"
               alt="OneByt Logo"
               className="logo"
             />
