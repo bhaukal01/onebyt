@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Plans from "./pages/Plans";
 import WebServices from "./pages/WebServices";
 import MinecraftServices from "./pages/MinecraftServices";
+import RefundPolicy from "./pages/RefundPolicy";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/plans" element={<Plans />} />
         <Route path="/web-services" element={<WebServices />} />
         <Route path="/minecraft-services" element={<MinecraftServices />} />
+        <Route path="/refund-policy" element={<RefundPolicy />} />
       </Routes>
       <Footer />
     </>

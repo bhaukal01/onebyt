@@ -53,6 +53,9 @@ function Footer() {
               <li>
                 <a href="/privacy-policy">Privacy Policy</a>
               </li>
+              <li>
+                <a href="/refund-policy">Refund Policy</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -67,6 +70,7 @@ function Footer() {
             <span className="company-name">OneByt Cloud Systems</span>
           </div>
           <p>© 2025 OneByt Cloud Systems. All Rights Reserved.</p>
+          <p>Aditya Narayan</p>
         </div>
       </div>
     </footer>
