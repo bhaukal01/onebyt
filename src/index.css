@@ -22,10 +22,10 @@ footer {
   max-width: 800px;
 }
 
-.p-info {
+/* .p-info {
   display: flex;
   max-width: 800px;
-}
+} */
 
 .center {
   flex-direction: row;

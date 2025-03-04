@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import "./Checkout.css";
 
 function Checkout() {
   const location = useLocation();
