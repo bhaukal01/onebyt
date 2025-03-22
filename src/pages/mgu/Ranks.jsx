@@ -7,7 +7,7 @@ import "./styles/ranks.css";
 const ranks = [
   {
     name: "VIP",
-    price: "199",
+    price: "1",
     info: {
       1: "Reduces RandomTP Cooldown by 50%",
       2: "4 Player Vaults (/pv)",
