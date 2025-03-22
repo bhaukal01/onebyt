@@ -143,7 +143,7 @@ const Buy = () => {
           <button className="btn btn-buy mt-3" onClick={handlePayment}>
             Proceed to Payment
           </button>
-          <a href="/" className="btn btn-buy mt-3">
+          <a href="/ranks" className="btn btn-buy mt-3">
             Cancel
           </a>
         </div>
