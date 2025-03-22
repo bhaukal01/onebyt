@@ -22,6 +22,7 @@ import Ranks from "./pages/mgu/Ranks.jsx";
 import Crates from "./pages/mgu/Crates.jsx";
 import RankUp from "./pages/mgu/RankUp.jsx";
 import Buy from "./pages/mgu/Buy.jsx";
+import PaymentSuccess from "./pages/mgu/PaymentSuccess.jsx";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         <Route path="/crates" element={<Crates />} />
         <Route path="/rankup" element={<RankUp />} />
         <Route path="/buy" element={<Buy />} />
+        <Route path="/success" element={<PaymentSuccess />} />
       </Routes>
       <Footer />
     </>
