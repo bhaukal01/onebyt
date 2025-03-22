@@ -61,14 +61,14 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <div className="brand">
+          {/* <div className="brand">
             <img
               src="https://bhaukal-drive.s3.amazonaws.com/drive-files/onebyt-logo.png"
               alt="OneByt Logo"
               className="logo"
             />
             <span className="company-name">OneByt Cloud Systems</span>
-          </div>
+          </div> */}
           <p>© 2025 OneByt Cloud Systems. All Rights Reserved.</p>
         </div>
       </div>

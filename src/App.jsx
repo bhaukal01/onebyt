@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import LandingPage from "./pages/LandingPage";
 import ContactUs from "./pages/ContactUs";
 import TermsConditions from "./pages/TermsConditions";
@@ -11,6 +12,12 @@ import Plans from "./pages/Plans";
 import WebServices from "./pages/WebServices";
 import MinecraftServices from "./pages/MinecraftServices";
 import RefundPolicy from "./pages/RefundPolicy";
+
+import Index from "./pages/mgu/Index.jsx";
+import Ranks from "./pages/mgu/Ranks.jsx";
+import Crates from "./pages/mgu/Crates.jsx";
+import RankUp from "./pages/mgu/RankUp.jsx";
+import Buy from "./pages/mgu/Buy.jsx";
 
 function App() {
   return (
@@ -27,6 +34,11 @@ function App() {
         <Route path="/web-services" element={<WebServices />} />
         <Route path="/minecraft-services" element={<MinecraftServices />} />
         <Route path="/refund-policy" element={<RefundPolicy />} />
+        <Route path="/mgu" element={<Index />} />
+        <Route path="/ranks" element={<Ranks />} />
+        <Route path="/crates" element={<Crates />} />
+        <Route path="/rankup" element={<RankUp />} />
+        <Route path="/buy" element={<Buy />} />
       </Routes>
       <Footer />
     </>
