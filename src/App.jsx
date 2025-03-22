@@ -1,6 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import "./pages/mgu/styles/index.css";
+import "./pages/mgu/styles/ranks.css";
+import "./pages/mgu/styles/crates.css";
 import LandingPage from "./pages/LandingPage";
 import ContactUs from "./pages/ContactUs";
 import TermsConditions from "./pages/TermsConditions";
