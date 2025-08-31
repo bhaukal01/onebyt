@@ -1,0 +1,174 @@
+/* OurTeam.css — aligned to OurTeam.jsx classes */
+
+/* Design tokens */
+:root {
+  --bg: #0e1116;
+  --bg-soft: #141923;
+  --surface: #0f1624;
+  --text: #e8edf6;
+  --muted: #a8b3c7;
+  --line: rgba(255, 255, 255, 0.08);
+  --accent: #4da3ff;
+  --accent-2: #7cc4ff;
+  --shadow-lg: 0 14px 34px rgba(0, 0, 0, 0.45);
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --radius-lg: 16px;
+  --gap-lg: 32px;
+  --gap-md: 20px;
+}
+
+/* Section */
+.our-team {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+  color: var(--text);
+  padding: clamp(56px, 7vw, 88px) 20px;
+}
+
+.our-team__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.our-team__header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.our-team__title {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.our-team__subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(15px, 2vw, 18px);
+}
+
+/* Decorative underline matching brand accent */
+.our-team__title::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 3px;
+  margin: 12px auto 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 3px;
+}
+
+/* Grid */
+.our-team__grid {
+  display: grid; /* ensure grid is applied */
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap-lg);
+  align-items: stretch; /* cards same height */
+}
+
+@media (max-width: 1024px) {
+  .our-team__grid {
+    gap: var(--gap-md);
+  }
+}
+
+/* Cards per row by breakpoint */
+@media (min-width: 901px) {
+  .team-card {
+    grid-column: span 4;
+  } /* 3 per row on desktop */
+}
+@media (max-width: 900px) and (min-width: 601px) {
+  .team-card {
+    grid-column: span 6;
+  } /* 2 per row on tablet */
+}
+@media (max-width: 600px) {
+  .team-card {
+    grid-column: 1 / -1;
+  } /* full width on mobile */
+}
+
+/* Card */
+.team-card {
+  background: radial-gradient(
+      120% 120% at 0% 0%,
+      rgba(77, 163, 255, 0.07) 0%,
+      transparent 48%
+    ),
+    var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 220ms ease, box-shadow 220ms ease,
+    border-color 220ms ease;
+  will-change: transform;
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(77, 163, 255, 0.28);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Media */
+.team-card__media {
+  position: relative;
+  aspect-ratio: 4 / 3; /* consistent image block */
+  overflow: hidden;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(0, 0, 0, 0.06)
+  );
+}
+
+.team-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  filter: saturate(1.04) contrast(1.03);
+  transition: transform 300ms ease;
+}
+
+.team-card:hover .team-card__img {
+  transform: scale(1.06);
+}
+
+/* Body */
+.team-card__body {
+  padding: 18px 18px 20px;
+  border-top: 1px solid var(--line);
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.02),
+      transparent 40%
+    ),
+    radial-gradient(
+      80% 60% at 10% 0%,
+      rgba(124, 196, 255, 0.08),
+      transparent 42%
+    );
+}
+
+.team-card__name {
+  margin: 0 0 6px;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.team-card__post {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Focus state for keyboard users */
+.team-card:focus-within,
+.team-card:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

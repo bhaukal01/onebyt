@@ -13,6 +13,7 @@ import Plans from "./pages/Plans";
 import WebServices from "./pages/WebServices";
 import MinecraftServices from "./pages/MinecraftServices";
 import RefundPolicy from "./pages/RefundPolicy";
+import OurTeam from "./pages/OurTeam";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/web-services" element={<WebServices />} />
         <Route path="/minecraft-services" element={<MinecraftServices />} />
         <Route path="/refund-policy" element={<RefundPolicy />} />
+        <Route path="/our-team" element={<OurTeam />} />
       </Routes>
       <Footer />
     </>

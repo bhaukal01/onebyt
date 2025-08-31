@@ -45,6 +45,9 @@ function Footer() {
                 <a href="/about-us">About Us</a>
               </li>
               <li>
+                <a href="/our-team">Our Team</a>
+              </li>
+              <li>
                 <a href="/partners">Partners</a>
               </li>
               <li>

@@ -1,0 +1,40 @@
+{
+    "members": [
+        {
+            "id": "ceo",
+            "name": "Aditya Narayan",
+            "post": "Founder",
+            "image": "https://media.licdn.com/dms/image/v2/D5603AQFIkuDI5268WQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1702786784208?e=1759363200&v=beta&t=rl325JxsI7XaYj0W_0ijkBMYxHeGCxx_T6RP0BwsYSA"
+        },
+        {
+            "id": "cto",
+            "name": "Om Bhardwaj",
+            "post": "CTO & Security Lead",
+            "image": "https://ik.imagekit.io/1usyzu9ab/Om.jpg"
+        },
+        {
+            "id": "frontend",
+            "name": "Aman Kumar",
+            "post": "Frontend Developer",
+            "image": "https://ik.imagekit.io/1usyzu9ab/Aman.jpeg"
+        },
+        {
+            "id": "dotnet",
+            "name": "Piyush Gaurav",
+            "post": ".NET Developer",
+            "image": "https://media.licdn.com/dms/image/v2/D4E03AQEeDqgfnaPQzQ/profile-displayphoto-shrink_800_800/B4EZU49OnsGYAg-/0/1740417331083?e=1759363200&v=beta&t=0KzBZdyev3uGlvK-I6oTmhW4zwxexeAPhzmx7YWJIdk"
+        },
+        {
+            "id": "py-dev",
+            "name": "Rahul Kumar",
+            "post": "Python Developer",
+            "image": "https://media.licdn.com/dms/image/v2/D4D35AQH6petrISk6nQ/profile-framedphoto-shrink_800_800/B4DZdjU5MWHAAg-/0/1749718111290?e=1757282400&v=beta&t=rXyqqeH-I3ZhC86IgdcBfikiDR2Q8tOChRgVE9UKOUk"
+        },
+        {
+            "id": "pm",
+            "name": "Neha Kulkarni",
+            "post": "Project Manager",
+            "image": "https://media.istockphoto.com/id/1399788030/photo/portrait-of-young-confident-indian-woman-pose-on-background.jpg?s=612x612&w=0&k=20&c=aQw5YhGl99hL1O77thwpQTmqVE7bc8rCX9H0gTeoX_k="
+        }
+    ]
+}
