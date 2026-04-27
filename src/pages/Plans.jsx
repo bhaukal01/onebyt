@@ -1,12 +1,13 @@
-import { data, useNavigate } from "react-router-dom";
-import { Tooltip } from "react-tooltip";
+import { useNavigate } from "react-router-dom";
+import PageShell from "../components/PageShell";
 
 function Plans() {
   const navigate = useNavigate();
 
   const plans = [
     {
-      name: "Bungee Plan [Only for Proxy servers]",
+      name: "bungee plan",
+      details: "only for proxy servers",
       price: "180",
       ram: "2GB RAM",
       storage: "10GB SSD",
@@ -17,7 +18,8 @@ function Plans() {
       cpu: "100",
     },
     {
-      name: "Standard Plan",
+      name: "standard plan",
+      details: "balanced setup for growing servers",
       price: "360",
       ram: "4GB RAM",
       storage: "20GB SSD",
@@ -28,7 +30,8 @@ function Plans() {
       cpu: "150",
     },
     {
-      name: "Advanced Plan",
+      name: "advanced plan",
+      details: "higher concurrency and plugin workloads",
       price: "540",
       ram: "6GB RAM",
       storage: "30GB SSD",
@@ -39,7 +42,8 @@ function Plans() {
       cpu: "180",
     },
     {
-      name: "Pro Plan",
+      name: "pro plan",
+      details: "optimized for intensive communities",
       price: "720",
       ram: "8GB RAM",
       storage: "40GB SSD",
@@ -50,7 +54,8 @@ function Plans() {
       cpu: "220",
     },
     {
-      name: "Elite Plan",
+      name: "elite plan",
+      details: "large-scale gameplay sessions",
       price: "1080",
       ram: "12GB RAM",
       storage: "60GB SSD",
@@ -61,7 +66,8 @@ function Plans() {
       cpu: "300",
     },
     {
-      name: "Ultimate Plan",
+      name: "ultimate plan",
+      details: "premium performance profile",
       price: "1440",
       ram: "16GB RAM",
       storage: "80GB SSD",
@@ -72,7 +78,8 @@ function Plans() {
       cpu: "350",
     },
     {
-      name: "Mega Plan",
+      name: "mega plan",
+      details: "for broad multi-world ecosystems",
       price: "2160",
       ram: "24GB RAM",
       storage: "100GB SSD",
@@ -83,7 +90,8 @@ function Plans() {
       cpu: "400",
     },
     {
-      name: "Extreme Plan",
+      name: "extreme plan",
+      details: "enterprise-grade throughput",
       price: "2880",
       ram: "32GB RAM",
       storage: "150GB SSD",
@@ -95,53 +103,73 @@ function Plans() {
     },
   ];
 
-  let usd = plans.price;
-  let inr = usd * 80;
-
   const handleSelectPlan = (plan) => {
     navigate("/checkout", { state: { plan } });
   };
 
   return (
-    <div className="container mt-5">
-      <h2 className="text-center">Minecraft Hosting Plans</h2>
-      <div className="row mt-4">
-        {plans.map((plan, index) => (
-          <div key={index} className="col-md-3 mb-4">
-            <div className="card text-center shadow">
-              <div className="card-body">
-                <h5 className="card-title">{plan.name}</h5>
-                <br />
-                <h6 className="card-subtitle mb-2 text-muted">
-                  Rs. {plan.price}/month
-                </h6>
-                <br />
-                <p className="card-text">{plan.ram}</p>
-                <p className="card-text">{plan.storage}</p>
-                <p className="card-text">
+    <PageShell
+      eyebrow="pricing"
+      title="hosting plans built for reliable runtime"
+      subtitle="choose a minecraft hosting profile and let our team handle node allocation, monitoring, and uptime management end to end."
+    >
+      <section className="glass-card p-6 md:p-8 fade-up delay-1">
+        <h2 className="text-2xl md:text-3xl font-medium tracking-tight">
+          minecraft hosting plans
+        </h2>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          {plans.map((plan) => (
+            <article
+              key={plan.name}
+              className="rounded-3xl border border-white/14 bg-black/35 p-5 flex flex-col"
+            >
+              <p className="text-xs uppercase tracking-[0.16em] text-white/55 m-0">
+                {plan.details}
+              </p>
+              <h3 className="mt-2 text-xl font-medium tracking-tight lowercase">
+                {plan.name}
+              </h3>
+              <p className="mt-3 text-3xl font-medium tracking-tight">
+                ₹{plan.price}
+                <span className="ml-1 text-sm text-white/60">/month</span>
+              </p>
+
+              <ul className="mt-4 space-y-2 text-sm text-white/78">
+                <li>{plan.ram}</li>
+                <li>{plan.storage}</li>
+                <li>
                   {plan.backup} • {plan.databases}
-                </p>
-                <p className="card-text">{plan.cpu}% Intel Xeon CPU </p>
-                <p className="card-text">{plan.players}</p>
-                <button
-                  className="btn btn-primary"
-                  onClick={() => handleSelectPlan(plan)}
-                >
-                  Select Plan
-                </button>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <span className="d-flex justify-content-center">
-        ■■■■■■■■■■■■■■◻◻◻◻◻◻◻◻◻◻◻◻■■■■■■■■■■■■■■
-      </span>
-      <h2 className="text-center web">Web Hosting Plans</h2>
-      <div>
-        <p className="lead">Coming Soon</p>
-      </div>
-    </div>
+                </li>
+                <li>{plan.portallocations}</li>
+                <li>{plan.players}</li>
+                <li>{plan.cpu}% intel xeon cpu</li>
+              </ul>
+
+              <button
+                className="mt-6 w-full bg-white text-black text-sm font-normal rounded-full px-5 py-3 hover:bg-neutral-200 transition-colors"
+                onClick={() => handleSelectPlan(plan)}
+              >
+                select plan
+              </button>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="glass-card p-6 md:p-8 fade-up delay-2">
+        <h2 className="text-2xl md:text-3xl font-medium tracking-tight lowercase">
+          web hosting plans
+        </h2>
+        <p className="mt-3 text-white/75 leading-relaxed max-w-2xl">
+          managed web hosting tiers are currently being finalized with provider
+          benchmarking and route optimization. launch-ready pricing will be
+          published soon.
+        </p>
+        <div className="mt-5 inline-flex items-center rounded-full border border-white/18 bg-black/40 px-4 py-2 text-sm text-white/80 lowercase">
+          coming soon
+        </div>
+      </section>
+    </PageShell>
   );
 }
 

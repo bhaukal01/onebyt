@@ -1,72 +1,99 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
-// import ./Navbar.css";
+import { useEffect, useState } from "react";
+import { href, Link } from "react-router-dom";
+import BrandLogo from "./BrandLogo";
+import { label } from "framer-motion/client";
 
-function Navbar({ handleLogout }) {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+const navItems = [
+  { label: "home", href: "#home" },
+  { label: "services", href: "#services" },
+  { label: "providers", href: "#providers" },
+  { label: "plans", href: "#plans" },
+  { label: "contact", href: "#contact" },
+];
+
+function Navbar() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      setScrolled(currentY > 12);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleAnchorClick = () => setMobileOpen(false);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
-          <img
-            src="https://bhaukal-drive.s3.amazonaws.com/drive-files/onebyt-logo.png"
-            alt="OneByt Logo"
-            width={40}
-          />
-          OneByt Cloud Systems
-        </Link>
+    <header className="fixed left-0 right-0 top-0 z-40 px-6 md:px-10 pt-6">
+      <div className={scrolled ? "opacity-100" : "opacity-95"}>
+        <nav className="flex items-center justify-between gap-4">
+          <Link
+            to="/"
+            className="flex items-center gap-2 bg-neutral-900/90 backdrop-blur rounded-full pl-4 pr-6 py-3"
+            onClick={handleAnchorClick}
+          >
+            <BrandLogo className="h-5 w-5" />
+            <span className="text-white text-sm font-normal tracking-tight">
+              onebyt cloud systems
+            </span>
+          </Link>
 
-        {/* Burger Menu Button */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          onClick={() => setIsCollapsed(!isCollapsed)}
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded={!isCollapsed}
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+          <div className="hidden md:flex items-center gap-1 bg-neutral-900/90 backdrop-blur rounded-full px-3 py-2">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-sm px-5 py-2 rounded-full text-neutral-300 hover:text-white transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-2">
+            <a
+              href="#contact"
+              className="bg-white text-black text-sm font-normal rounded-full px-6 py-3 hover:bg-neutral-200 transition-colors"
+            >
+              get started
+            </a>
+
+            <button
+              type="button"
+              className="md:hidden bg-neutral-900/90 backdrop-blur rounded-full px-4 py-3 text-sm text-white"
+              onClick={() => setMobileOpen((prev) => !prev)}
+              aria-expanded={mobileOpen}
+              aria-label="Toggle navigation"
+            >
+              {mobileOpen ? "close" : "menu"}
+            </button>
+          </div>
+        </nav>
 
         <div
-          className={`collapse navbar-collapse ${isCollapsed ? "" : "show"}`}
-          id="navbarNav"
+          className={`md:hidden transition-[max-height,opacity] duration-300 overflow-hidden ${
+            mobileOpen ? "max-h-96 opacity-100 mt-3" : "max-h-0 opacity-0"
+          }`}
         >
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item mx-2  lead font-weight-bold rounded">
-              <Link className="nav-link text-white" to="/">
-                Home
-              </Link>
-            </li>
-            <li className="nav-item mx-2  lead font-weight-bold rounded">
-              <Link className="nav-link text-white" to="/web-services">
-                Web Services
-              </Link>
-            </li>
-            <li className="nav-item mx-2  lead font-weight-bold rounded">
-              <Link className="nav-link text-white" to="/minecraft-services">
-                Minecraft Services
-              </Link>
-            </li>
-            <li className="nav-item mx-2  lead font-weight-bold rounded">
-              <Link className="nav-link text-white" to="/plans">
-                Plans
-              </Link>
-            </li>
-            <li className="nav-item mx-2 lead font-weight-bold bg-success  rounded">
-              <Link className="nav-link text-white" to="/contact-us">
-                Contact us
-              </Link>
-            </li>
-          </ul>
+          <div className="rounded-3xl bg-neutral-900/90 backdrop-blur p-2">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={handleAnchorClick}
+                className="block text-sm px-4 py-3 rounded-2xl transition-colors text-neutral-300 hover:text-white"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
-    </nav>
+    </header>
   );
 }
 

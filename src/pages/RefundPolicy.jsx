@@ -1,58 +1,60 @@
-import "./RefundPolicy.css";
+import { Link } from "react-router-dom";
+import PageShell from "../components/PageShell";
 
 const RefundPolicy = () => {
   return (
-    <div className="privacy-container">
-      <div className="container">
-        <h1 className="text-center">Refund Policy</h1>
-        <section>
+    <PageShell
+      eyebrow="policy"
+      title="refund policy"
+      subtitle="transparent handling for eligible service cancellations and unresolved technical failures."
+    >
+      <article className="glass-card p-6 md:p-8 policy-copy fade-up delay-1 space-y-8">
+        <section className="space-y-3">
+          <h2>1. policy overview</h2>
           <p>
-            At <strong>OneByt Cloud Systems</strong>, we are committed to
-            providing high-quality cloud solutions. If you are not satisfied
-            with your purchase, we offer a refund policy under certain
-            conditions.
+            onebyt cloud systems is committed to high-quality managed hosting and
+            deployment delivery. refunds are reviewed on a case-by-case basis
+            under the conditions below.
           </p>
         </section>
 
-        <section>
-          <h2>2. Eligibility for Refunds</h2>
-          <p>Refunds are available for the following services:</p>
-          <ul>
-            <li>Web hosting plans (if canceled within 3 days of purchase).</li>
+        <section className="space-y-3">
+          <h2>2. eligibility for refunds</h2>
+          <ul className="list-disc space-y-2">
+            <li>deployment service plans canceled within 3 days of purchase.</li>
             <li>
-              Game hosting services (if technical issues persist and cannot be
-              resolved or within 24 hrs of purchase).
+              minecraft service plans where persistent technical issues cannot be
+              resolved, or within 24 hours of purchase.
             </li>
-            <li>
-              Web development services (only if the project has not been
-              started).
-            </li>
-            <li>Minecraft services (If development hasn't been started).</li>
+            <li>deployment setup and custom infrastructure work not yet started.</li>
+            <li>minecraft service engagements not yet initiated.</li>
           </ul>
         </section>
 
-        <section>
-          <h2>4. Refund Process</h2>
+        <section className="space-y-3">
+          <h2>3. refund process</h2>
           <p>
-            To request a refund, please contact our support team via our{" "}
-            <a href="/contact-us">Contact Us</a> page. Include your order
-            details and the reason for the refund request.
+            submit your refund request through{" "}
+            <Link to="/contact-us" className="policy-link">
+              contact us
+            </Link>
+            , including order details and reason for cancellation.
           </p>
           <p>
-            Refunds will be processed within 7-10 business days after approval.
+            approved refunds are generally processed within 7-10 business days.
           </p>
         </section>
 
-        <section>
-          <h2>5. Late or Missing Refunds</h2>
+        <section className="space-y-3">
+          <h2>4. late or missing refunds</h2>
           <p>
-            If you haven't received a refund after we releasedthe funds, please
-            check with your bank. If the issue persists, contact us at{" "}
-            <strong>support@onebyt.com</strong>.
+            if a refund remains pending after release from our side, please
+            check with your payment provider or bank first, then contact
+            support@onebyt.systems for escalation.
           </p>
         </section>
-      </div>
-    </div>
+      </article>
+    </PageShell>
   );
 };
 

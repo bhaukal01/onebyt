@@ -1,0 +1,38 @@
+[
+    {
+        "id": "aws",
+        "name": "amazon web services",
+        "description": "elastic compute and autoscaling clusters for production-grade app workloads.",
+        "image": "https://img.icons8.com/color/96/amazon-web-services.png"
+    },
+    {
+        "id": "azure",
+        "name": "microsoft azure",
+        "description": "enterprise cloud regions with robust networking, security, and managed platform services.",
+        "image": "https://img.icons8.com/color/96/azure-1.png"
+    },
+    {
+        "id": "gcp",
+        "name": "google cloud",
+        "description": "global infrastructure for containerized services, analytics, and latency-sensitive APIs.",
+        "image": "https://cdn.simpleicons.org/googlecloud/ffffff"
+    },
+    {
+        "id": "cloudflare",
+        "name": "cloudflare",
+        "description": "edge delivery, dns, waf, and traffic acceleration to protect and optimize deployments.",
+        "image": "https://cdn.simpleicons.org/cloudflare/ffffff"
+    },
+    {
+        "id": "digitalocean",
+        "name": "digitalocean",
+        "description": "cost-efficient compute and managed services for startup and indie production stacks.",
+        "image": "https://cdn.simpleicons.org/digitalocean/ffffff"
+    },
+    {
+        "id": "vercel",
+        "name": "vercel",
+        "description": "frontend delivery network optimized for modern react and static web application releases.",
+        "image": "https://cdn.simpleicons.org/vercel/ffffff"
+    }
+]

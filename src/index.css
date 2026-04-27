@@ -1,83 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #121212;
-  color: #eaeaea;
+  margin: 0;
+  font-family:
+    "Readex Pro",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background: #000;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-footer {
+a {
+  color: inherit;
+}
+
+.text-black {
+  color: #000 !important;
+}
+
+.hero-title {
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+}
+
+.section-eyebrow {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.76rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  margin: 0.9rem 0 0;
+  font-size: clamp(2rem, 5.8vw, 4.7rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+}
+
+.section-subtitle {
+  margin: 1.3rem 0 0;
+  max-width: 42rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: clamp(0.96rem, 1.5vw, 1.08rem);
+  line-height: 1.6;
+}
+
+.section-surface {
+  margin: 0 auto;
+  max-width: 78rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 1.6rem;
+  background:
+    radial-gradient(
+      circle at 14% 8%,
+      rgba(255, 255, 255, 0.11),
+      rgba(255, 255, 255, 0) 34%
+    ),
+    radial-gradient(
+      circle at 92% 0%,
+      rgba(255, 255, 255, 0.09),
+      rgba(255, 255, 255, 0) 28%
+    ),
+    rgba(15, 15, 15, 0.78);
+  backdrop-filter: blur(15px);
+  transform-style: preserve-3d;
+}
+
+@media (min-width: 768px) {
+  .section-surface {
+    padding: 2rem;
+  }
+}
+
+.interactive-card {
   position: relative;
-  bottom: 0;
-  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform;
 }
 
-.contact-form {
-  max-width: 800px;
+
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .interactive-card {
+    transition: none;
+  }
 }
 
-.container {
-  align-items: center;
+/* Page Shell & Subpage Styling */
+.site-page {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 140px;
+  padding-bottom: 100px;
+  background-color: #000;
 }
 
-.plan-disp {
-  display: flex;
-  justify-content: space-around;
-  max-width: 800px;
+.page-container {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 10;
 }
 
-/* .p-info {
-  display: flex;
-  max-width: 800px;
-} */
-
-.center {
-  flex-direction: row;
+@media (min-width: 768px) {
+  .page-container {
+    padding: 0 2.5rem;
+  }
 }
 
-/* Websercies */
-
-.services-container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
-  text-align: center;
+.page-eyebrow {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.76rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
-.services-header h1 {
-  color: #1db9ff;
-  font-size: 32px;
-  margin-bottom: 10px;
+.page-title {
+  margin: 0.9rem 0 0;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+  color: #fff;
 }
 
-.services-header p {
-  color: #bbb;
-  font-size: 18px;
-  margin-bottom: 40px;
+.page-subtitle {
+  margin: 1.3rem 0 0;
+  max-width: 42rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: clamp(0.96rem, 1.5vw, 1.08rem);
+  line-height: 1.6;
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+.glass-card {
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(15, 15, 15, 0.78);
+  backdrop-filter: blur(15px);
 }
 
-.service-card {
-  background: #1a1b23;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+.policy-copy {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
 }
 
-.service-card h2 {
-  color: #1db9ff;
-  font-size: 22px;
-  margin-bottom: 10px;
+.policy-copy h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-top: 1rem;
 }
 
-.service-card p {
-  color: #ddd;
-  font-size: 16px;
+.policy-copy p {
+  margin-block-start: 0;
 }
 
-.service-card:hover {
-  transform: scale(1.05);
+.policy-copy ul {
+  margin-left: 1.2rem;
+  margin-block-start: 0;
+}
+
+.policy-link {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.3);
+  text-underline-offset: 4px;
+  transition: text-decoration-color 0.2s ease;
+}
+
+.policy-link:hover {
+  text-decoration-color: #fff;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
 }

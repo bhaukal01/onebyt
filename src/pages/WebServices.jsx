@@ -1,70 +1,61 @@
-import "./WebServices.css";
+import PageShell from "../components/PageShell";
+
+const webServices = [
+  {
+    title: "full-stack web development",
+    description:
+      "we build modern applications with react, angular, node.js, express, and mongodb for fast and scalable deployments.",
+  },
+  {
+    title: "wordpress development",
+    description:
+      "custom wordpress builds with optimized themes, integrations, and secure commerce-ready architecture.",
+  },
+  {
+    title: "shopify development",
+    description:
+      "tailored storefront experiences, performance optimization, and app-level integrations for growth-focused brands.",
+  },
+  {
+    title: "wix website development",
+    description:
+      "seo-friendly wix sites designed for clean user journeys and strong conversion outcomes.",
+  },
+  {
+    title: "ecommerce solutions",
+    description:
+      "from shopify and woocommerce to custom stacks, we architect robust online commerce systems.",
+  },
+  {
+    title: "custom web solutions",
+    description:
+      "bespoke implementations for unique business workflows, with deployment and maintenance included.",
+  },
+];
 
 function WebServices() {
   return (
-    <div className="services-container">
-      <header className="services-header">
-        <h1>Our Web Services</h1>
-        <p>Empowering businesses with robust and scalable web solutions.</p>
-      </header>
-
-      <div className="services-grid">
-        {/* Full-Stack Development */}
-        <div className="service-card">
-          <h2>Full-Stack Web Development</h2>
-          <p>
-            We build modern web applications using React, Angular, Node.js,
-            Express, and MongoDB to deliver high-performance, scalable
-            solutions.
-          </p>
-        </div>
-
-        {/* WordPress Development */}
-        <div className="service-card">
-          <h2>WordPress Development</h2>
-          <p>
-            Custom WordPress websites with themes, plugins, and eCommerce
-            solutions tailored to your business needs.
-          </p>
-        </div>
-
-        {/* Shopify Development */}
-        <div className="service-card">
-          <h2>Shopify Development</h2>
-          <p>
-            Build and optimize your online store with Shopify. We provide custom
-            themes, integrations, and performance enhancements.
-          </p>
-        </div>
-
-        {/* Wix Development */}
-        <div className="service-card">
-          <h2>Wix Website Development</h2>
-          <p>
-            Get a stunning Wix-based website designed with SEO-friendly features
-            and seamless user experience.
-          </p>
-        </div>
-
-        {/* eCommerce Development */}
-        <div className="service-card">
-          <h2>eCommerce Solutions</h2>
-          <p>
-            Build your online store with Shopify, WooCommerce, Wix, or custom
-            solutions to drive sales and manage inventory efficiently.
-          </p>
-        </div>
-
-        {/* Custom Web Solutions */}
-        <div className="service-card">
-          <h2>Custom Web Solutions</h2>
-          <p>
-            Need something unique? We create tailored web solutions that match
-            your exact business requirements.
-          </p>
-        </div>
+    <PageShell
+      eyebrow="services"
+      title="web services for secure high-performance rollout"
+      subtitle="we design, build, and host production-ready web platforms with strong reliability, speed, and long-term maintainability."
+    >
+      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3 fade-up delay-1">
+        {webServices.map((service) => (
+          <article
+            key={service.title}
+            className="glass-card p-6 transition-transform duration-300 hover:-translate-y-1"
+          >
+            <h2 className="text-xl font-medium tracking-tight lowercase m-0">
+              {service.title}
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-white/75 m-0">
+              {service.description}
+            </p>
+          </article>
+        ))}
       </div>
-    </div>
+    </PageShell>
   );
 }
 
