@@ -1,5 +1,3 @@
-import { image } from "framer-motion/client";
-
 function BrandLogo({ className = "h-5 w-5" }) {
   return <img src="/onebyt-logo.png" className={className}></img>;
 }

@@ -1,0 +1,46 @@
+[
+    {
+        "name": "proxy network",
+        "price": "3999",
+        "bestFor": "bungeecord and velocity ecosystems",
+        "features": [
+            "proxy setup + routing",
+            "lobby and fallback config",
+            "ddos-aware edge setup",
+            "daily health checks"
+        ]
+    },
+    {
+        "name": "survival management",
+        "price": "5499",
+        "bestFor": "community survival servers",
+        "features": [
+            "economy and rank setup",
+            "plugin optimization",
+            "backup and restore",
+            "weekly tuning pass"
+        ]
+    },
+    {
+        "name": "bedwars operations",
+        "price": "7499",
+        "bestFor": "competitive bedwars clusters",
+        "features": [
+            "arena logic implementation",
+            "anti-cheat baseline",
+            "latency-aware node selection",
+            "event-day support"
+        ]
+    },
+    {
+        "name": "custom minigame stack",
+        "price": "11499",
+        "bestFor": "multi-mode server networks",
+        "features": [
+            "custom game mode workflows",
+            "cross-server data sync",
+            "performance load tests",
+            "priority response support"
+        ]
+    }
+]

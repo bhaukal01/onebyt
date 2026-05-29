@@ -1,0 +1,26 @@
+[
+    {
+        "title": "static and plain web hosting",
+        "description": "managed nginx and cdn-backed hosting for static and plain websites with autoscaling-ready infra."
+    },
+    {
+        "title": "react and frontend release management",
+        "description": "zero-downtime build pipelines, environment promotion, cache strategy, and rollback workflows."
+    },
+    {
+        "title": "api runtime operations",
+        "description": "containerized api deployments, traffic routing, rate controls, and health monitoring in production."
+    },
+    {
+        "title": "database management",
+        "description": "backup automation, replication, query health, and secure connection governance for live workloads."
+    },
+    {
+        "title": "ci/cd automation",
+        "description": "git-based continuous delivery pipelines wired to staging and production with approval gates."
+    },
+    {
+        "title": "uptime and incident handling",
+        "description": "24/7 alerting, log analysis, and remediation playbooks to keep applications online and responsive."
+    }
+]

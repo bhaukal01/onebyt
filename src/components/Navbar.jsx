@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-import { href, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import BrandLogo from "./BrandLogo";
-import { label } from "framer-motion/client";
 
 const navItems = [
-  { label: "home", href: "#home" },
+  { label: "home", href: "/#home" },
   { label: "services", href: "#services" },
   { label: "providers", href: "#providers" },
   { label: "plans", href: "#plans" },
@@ -27,13 +26,15 @@ function Navbar() {
 
   const handleAnchorClick = () => setMobileOpen(false);
 
+  const containerBg = scrolled ? "bg-neutral-900" : "bg-transparent";
+
   return (
     <header className="fixed left-0 right-0 top-0 z-40 px-6 md:px-10 pt-6">
-      <div className={scrolled ? "opacity-100" : "opacity-95"}>
+      <div className="opacity-100">
         <nav className="flex items-center justify-between gap-4">
           <Link
             to="/"
-            className="flex items-center gap-2 bg-neutral-900/90 backdrop-blur rounded-full pl-4 pr-6 py-3"
+            className={`flex items-center gap-2 ${containerBg} rounded-full pl-4 pr-6 py-3 transition-colors duration-300`}
             onClick={handleAnchorClick}
           >
             <BrandLogo className="h-5 w-5" />
@@ -42,7 +43,9 @@ function Navbar() {
             </span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-1 bg-neutral-900/90 backdrop-blur rounded-full px-3 py-2">
+          <div
+            className={`hidden md:flex items-center gap-1 ${containerBg} rounded-full px-3 py-2 transition-colors duration-300`}
+          >
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -64,7 +67,7 @@ function Navbar() {
 
             <button
               type="button"
-              className="md:hidden bg-neutral-900/90 backdrop-blur rounded-full px-4 py-3 text-sm text-white"
+              className={`md:hidden ${containerBg} rounded-full px-4 py-3 text-sm text-white transition-colors duration-300`}
               onClick={() => setMobileOpen((prev) => !prev)}
               aria-expanded={mobileOpen}
               aria-label="Toggle navigation"
@@ -79,7 +82,9 @@ function Navbar() {
             mobileOpen ? "max-h-96 opacity-100 mt-3" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="rounded-3xl bg-neutral-900/90 backdrop-blur p-2">
+          <div
+            className={`rounded-3xl ${containerBg} p-2 transition-colors duration-300`}
+          >
             {navItems.map((item) => (
               <a
                 key={item.href}

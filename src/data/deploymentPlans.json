@@ -1,0 +1,57 @@
+[
+    {
+        "name": "plain web launch",
+        "price": "1499",
+        "bestFor": "brochure and plain web hosting",
+        "features": [
+            "single region deployment",
+            "managed ssl and dns",
+            "weekly backup snapshots",
+            "basic uptime monitoring"
+        ]
+    },
+    {
+        "name": "react production",
+        "price": "3499",
+        "bestFor": "react, vite, and static app deployments",
+        "features": [
+            "ci/cd with branch previews",
+            "global cdn caching",
+            "release rollback policy",
+            "performance budget reports"
+        ]
+    },
+    {
+        "name": "api reliability",
+        "price": "5999",
+        "bestFor": "node, python, and containerized apis",
+        "features": [
+            "autoscaling runtime",
+            "health checks and alerts",
+            "rate limiting and waf",
+            "error tracing dashboards"
+        ]
+    },
+    {
+        "name": "database ops",
+        "price": "7499",
+        "bestFor": "mysql, postgres, and mongodb operations",
+        "features": [
+            "backup + restore drills",
+            "replication monitoring",
+            "query performance review",
+            "access policy hardening"
+        ]
+    },
+    {
+        "name": "fullstack scale",
+        "price": "9999",
+        "bestFor": "frontend + api + database production stacks",
+        "features": [
+            "multi-service orchestration",
+            "staging-to-production promotion",
+            "incident response support",
+            "monthly architecture review"
+        ]
+    }
+]

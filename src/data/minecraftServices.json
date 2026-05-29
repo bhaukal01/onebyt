@@ -1,0 +1,18 @@
+[
+    {
+        "title": "proxy development",
+        "description": "multi-node proxy topologies for large communities and seamless server transitions."
+    },
+    {
+        "title": "survival ecosystem setup",
+        "description": "economy balancing, world tuning, and plugin orchestration for long-term survival servers."
+    },
+    {
+        "title": "bedwars and minigame systems",
+        "description": "arena logic, matchmaking automation, and synchronized game-state infrastructure."
+    },
+    {
+        "title": "performance and anti-cheat hardening",
+        "description": "tick optimization, memory tuning, exploit protection, and operational monitoring."
+    }
+]
