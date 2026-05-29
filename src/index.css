@@ -87,6 +87,26 @@ a {
   transform-style: preserve-3d;
 }
 
+@media (max-width: 640px) {
+  .section-surface {
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+    backdrop-filter: none;
+    background: rgba(15, 15, 15, 0.92);
+  }
+
+  .section-subtitle {
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .interactive-card {
+    backdrop-filter: none;
+    will-change: auto;
+  }
+}
+
 @media (min-width: 768px) {
   .section-surface {
     padding: 2rem;
@@ -99,8 +119,6 @@ a {
   transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
   will-change: transform;
 }
-
-
 
 @media (prefers-reduced-motion: reduce) {
   html {

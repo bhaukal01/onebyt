@@ -21,6 +21,16 @@ function LandingPage() {
       return undefined;
     }
 
+    const isCoarsePointer =
+      typeof window !== "undefined" &&
+      window.matchMedia("(pointer: coarse)").matches;
+    const isSmallScreen =
+      typeof window !== "undefined" && window.innerWidth < 768;
+
+    if (isCoarsePointer || isSmallScreen) {
+      return undefined;
+    }
+
     const lenis = new Lenis({
       duration: 1.1,
       smoothWheel: true,

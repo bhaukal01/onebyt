@@ -15,9 +15,9 @@ function ContactSection({ formData, setFormData, onSubmit, isSubmitting }) {
           </h3>
           <div className="mt-4 space-y-3 text-sm text-white/78">
             <p className="m-0">email: support@onebyt.systems</p>
-            <p className="m-0">phone: +91 7367036311</p>
+            <p className="m-0">phone: +91 6372984551</p>
             <p className="m-0">
-              location: bh3 panchsakha nagar, bhubaneswar, odisha, india
+              location: bhubaneswar, odisha, india
             </p>
           </div>
           <div className="mt-6 rounded-2xl border border-white/14 bg-black/40 px-4 py-4 text-sm text-white/72 leading-relaxed">

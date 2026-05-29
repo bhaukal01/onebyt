@@ -41,11 +41,13 @@ const cookieTypes = [
 
 const PrivacyPolicy = () => {
   return (
+    
     <PageShell
       eyebrow="policy"
       title="privacy policy"
       subtitle="last updated: 04-03-2025"
     >
+
       <article className="glass-card p-6 md:p-8 policy-copy fade-up delay-1 space-y-8">
         {sections.map((section) => (
           <section key={section.title} className="space-y-3">
@@ -80,8 +82,8 @@ const PrivacyPolicy = () => {
         <section className="space-y-3">
           <h2>policy updates</h2>
           <p>
-            onebyt cloud systems may update this policy without prior notice. please
-            review this page periodically to stay informed.
+            onebyt cloud systems may update this policy without prior notice.
+            please review this page periodically to stay informed.
           </p>
         </section>
 

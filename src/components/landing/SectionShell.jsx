@@ -3,24 +3,28 @@ import { motion as Motion, useReducedMotion } from "framer-motion";
 
 function ScrollSection({ id, eyebrow, title, subtitle, children }) {
   const reduceMotion = useReducedMotion();
+  const isCoarsePointer =
+    typeof window !== "undefined" &&
+    window.matchMedia("(pointer: coarse)").matches;
+  const shouldReduceMotion = reduceMotion || isCoarsePointer;
 
   return (
-    <section id={id} className="relative px-6 md:px-10 py-12 md:py-20">
+    <section id={id} className="relative px-4 sm:px-6 md:px-10 py-12 md:py-20">
       <Motion.div
         className="section-surface"
         style={{
           transformPerspective: 1600,
-          willChange: "transform, opacity",
+          willChange: shouldReduceMotion ? "auto" : "transform, opacity",
         }}
         initial={
-          reduceMotion
+          shouldReduceMotion
             ? { opacity: 1, y: 0, rotateX: 0 }
             : { opacity: 0, y: 86, rotateX: 11 }
         }
         whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-        viewport={{ amount: 0.25, once: false }}
+        viewport={{ amount: 0.25, once: shouldReduceMotion }}
         transition={{
-          duration: 0.85,
+          duration: shouldReduceMotion ? 0 : 0.85,
           ease: [0.22, 1, 0.36, 1],
         }}
       >
@@ -36,9 +40,13 @@ function ScrollSection({ id, eyebrow, title, subtitle, children }) {
 function InteractiveCard({ className = "", children }) {
   const [pointer, setPointer] = useState({ x: 50, y: 50 });
   const reduceMotion = useReducedMotion();
+  const isCoarsePointer =
+    typeof window !== "undefined" &&
+    window.matchMedia("(pointer: coarse)").matches;
+  const shouldReduceMotion = reduceMotion || isCoarsePointer;
 
   const handleMouseMove = (event) => {
-    if (reduceMotion) {
+    if (shouldReduceMotion) {
       return;
     }
 
@@ -63,7 +71,7 @@ function InteractiveCard({ className = "", children }) {
         transformPerspective: 1100,
       }}
       whileHover={
-        reduceMotion
+        shouldReduceMotion
           ? undefined
           : {
               y: -10,

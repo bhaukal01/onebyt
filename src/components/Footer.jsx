@@ -25,7 +25,10 @@ function Footer() {
       title: "contact",
       items: [
         { label: "book onboarding", href: "#contact" },
-        { label: "support@onebyt.systems", href: "mailto:support@onebyt.systems" },
+        {
+          label: "support@onebyt.systems",
+          href: "mailto:support@onebyt.systems",
+        },
         { label: "+91 7367036311", href: "tel:+917367036311" },
       ],
     },
@@ -68,9 +71,24 @@ function Footer() {
           </a>
           <div className="flex flex-col md:items-end gap-2 text-sm text-white/60">
             <div className="flex gap-4">
-              <Link to="/privacy-policy" className="hover:text-white transition-colors">privacy policy</Link>
-              <Link to="/refund-policy" className="hover:text-white transition-colors">refund policy</Link>
-              <Link to="/terms-conditions" className="hover:text-white transition-colors">terms & conditions</Link>
+              <Link
+                to="/privacy-policy"
+                className="hover:text-white transition-colors"
+              >
+                privacy policy
+              </Link>
+              <Link
+                to="/refund-policy"
+                className="hover:text-white transition-colors"
+              >
+                refund policy
+              </Link>
+              <Link
+                to="/terms-conditions"
+                className="hover:text-white transition-colors"
+              >
+                terms & conditions
+              </Link>
             </div>
             <p>© {year} onebyt cloud systems. all rights reserved.</p>
           </div>
