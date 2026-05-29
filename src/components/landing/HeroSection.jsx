@@ -57,15 +57,15 @@ function HeroSection() {
         </div>
 
         <div className="absolute left-6 md:left-20 bottom-22 md:bottom-24 hidden md:block">
-          <div className="flex items-center gap-3">
+          {/* <div className="flex items-center gap-3">
             <span className="text-[clamp(2.2rem,3.5vw,3.4rem)] md:text-[clamp(2.6rem,3vw,3.7rem)] font-medium tracking-tight">
-              +10k
+              in-house hosting
             </span>
             <div className="hidden md:block h-px w-24 bg-white/40 rotate-[-20deg]" />
           </div>
           <p className="text-[clamp(0.68rem,0.8vw,0.85rem)] md:text-[clamp(0.72rem,0.8vw,0.9rem)] text-white/70 mt-1">
-            deployments managed
-          </p>
+            coming soon
+          </p> */}
         </div>
 
         <div className="absolute right-6 md:right-20 bottom-16 md:bottom-20">
